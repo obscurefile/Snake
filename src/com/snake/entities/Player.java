@@ -76,21 +76,4 @@ public class Player {
 			newSeg.setPos(lastX, lastY);
 		}
 	}
-	
-	//Useful for getting the position of each segment
-	public void printSegments() {
-		
-		Body snake = head;
-		
-		System.out.print("(" + snake.getX() + ", " + snake.getY() + ") -> ");
-		
-		while (snake.getNextSeg() != null) {
-			
-			snake = snake.getNextSeg();
-			
-			System.out.print("(" + snake.getX() + ", " + snake.getY() + ") -> ");
-		}
-		
-		System.out.println();
-	}
 }
